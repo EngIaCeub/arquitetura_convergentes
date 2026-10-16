@@ -20,3 +20,5 @@ Skills locais em .agents/skills; ler o SKILL.md pertinente. Não copiar skills g
 
 ## Publicação
 Preparar publicação conforme G9, depois de G8 PASS. Não publicar como efeito de P0; sem token no frontend, sem force-push ou alteração automática de visibilidade. Validar build, SHA, Actions, deployment e URL pública. Fontes e referências privadas ficam fora de dist.
+
+Exceção autorizada em 2026-10-16: pedido direto do usuário de publicar no GitHub Pages permitiu executar G9 antes do vídeo/ZIP acadêmicos G8. Preservar G8 PENDING, sem confundir deploy técnico com entrega acadêmica completa. Ver STATUS e evidence/G9.

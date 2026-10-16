@@ -62,4 +62,6 @@ G5 aprovado: evidence/G5/review.md e cobertura.md registram T01–26/C01–09 no
 
 G6 aprovado no alcance sintético: spec07 e evidence/G6/review.md/resultados.md/raw.json,480consultas corretas/480, mediana geral0,4ms em ambos métodos. Indicador técnico não equivale a benefício humano nem ao cadastro nacional. A15 possui evidência técnica; transposição para materiais G7 aprovada em evidence/G7/review.md.
 
-G7: 17 itens e cinco perguntas conferidos independentemente. G8: gravação real e pacote final pendentes. G9: publicação pendente.
+G7: 17 itens e cinco perguntas conferidos independentemente. G8: gravação real e pacote final pendentes. G9: publicação web PASS técnico, conforme evidence/G9/review.md.
+
+Publicação Pages verificada: https://engiaceub.github.io/arquitetura_convergentes/; SHA f0c0a02d1fb4c9b1e3b5321ebc3b87e2568d662a, Actions38854955465 success. G8 continua PENDING; publicação antecipada autorizada em 2026-10-16. Nenhuma conclusão acadêmica total ou benefício humano inferido.

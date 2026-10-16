@@ -73,14 +73,16 @@ P0/G0/G1/G2/G3/G4 PASS após revisões independentes; GV/G5/G6 PASS (G6 técnico
 | GV.8 | DONE | Conferir telas, estados e regressões | [PLANO_VISUAL_RETRO_NEON.md](PLANO_VISUAL_RETRO_NEON.md) |
 | GV.9 | DONE | Medir custo visual e corrigir problemas | [PLANO_VISUAL_RETRO_NEON.md](PLANO_VISUAL_RETRO_NEON.md) |
 | GV.10 | DONE | Revisar resultado e fechar etapa visual | [PLANO_VISUAL_RETRO_NEON.md](PLANO_VISUAL_RETRO_NEON.md) |
-| G9.1 | TODO | Confirmar repositório, branch padrão, autenticação, permissões e configuração Pages | [PLANO_DEPLOY_GITHUB_PAGES.md](PLANO_DEPLOY_GITHUB_PAGES.md) |
-| G9.2 | TODO | Criar/revisar CI e workflow Pages conforme spec 10 | [PLANO_DEPLOY_GITHUB_PAGES.md](PLANO_DEPLOY_GITHUB_PAGES.md) |
-| G9.3 | TODO | Executar checks finais, versionar arquivos necessários e enviar ao GitHub | [PLANO_DEPLOY_GITHUB_PAGES.md](PLANO_DEPLOY_GITHUB_PAGES.md) |
-| G9.4 | TODO | Habilitar fonte GitHub Actions quando necessário e executar publicação | [PLANO_DEPLOY_GITHUB_PAGES.md](PLANO_DEPLOY_GITHUB_PAGES.md) |
-| G9.5 | TODO | Testar URL HTTPS pública, assets, recarga, cadastro, filtros e persistência | [PLANO_DEPLOY_GITHUB_PAGES.md](PLANO_DEPLOY_GITHUB_PAGES.md) |
-| G9.6 | TODO | Conferir rollback e recuperação | [PLANO_DEPLOY_GITHUB_PAGES.md](PLANO_DEPLOY_GITHUB_PAGES.md) |
-| G9.7 | TODO | Atualizar README, apresentação, pacote e STATUS com links reais | [PLANO_DEPLOY_GITHUB_PAGES.md](PLANO_DEPLOY_GITHUB_PAGES.md) |
+| G9.1 | DONE | Confirmar repositório, branch padrão, autenticação, permissões e configuração Pages | [PLANO_DEPLOY_GITHUB_PAGES.md](PLANO_DEPLOY_GITHUB_PAGES.md) |
+| G9.2 | DONE | Criar/revisar CI e workflow Pages conforme spec 10 | [PLANO_DEPLOY_GITHUB_PAGES.md](PLANO_DEPLOY_GITHUB_PAGES.md) |
+| G9.3 | DONE | Executar checks finais, versionar arquivos necessários e enviar ao GitHub | [PLANO_DEPLOY_GITHUB_PAGES.md](PLANO_DEPLOY_GITHUB_PAGES.md) |
+| G9.4 | DONE | Habilitar fonte GitHub Actions quando necessário e executar publicação | [PLANO_DEPLOY_GITHUB_PAGES.md](PLANO_DEPLOY_GITHUB_PAGES.md) |
+| G9.5 | DONE | Testar URL HTTPS pública, assets, recarga, cadastro, filtros e persistência | [PLANO_DEPLOY_GITHUB_PAGES.md](PLANO_DEPLOY_GITHUB_PAGES.md) |
+| G9.6 | DONE | Conferir rollback e recuperação | [PLANO_DEPLOY_GITHUB_PAGES.md](PLANO_DEPLOY_GITHUB_PAGES.md) |
+| G9.7 | DONE | Atualizar README, apresentação, pacote e STATUS com links reais | [PLANO_DEPLOY_GITHUB_PAGES.md](PLANO_DEPLOY_GITHUB_PAGES.md) |
 
 G0: evidence/G0/review-rs-2024.md PASS; review.md preserva o parecer inicial. Spec 00 e evidências validadas. G1 concluído; consultar registros em evidence/G1.
 
 G1: evidence/G1/review.md PASS documental. Registro histórico; G2/G3/G4 foram concluídos posteriormente, conforme STATUS.
+
+G9.1–7 DONE no alcance da publicação web autorizada em 2026-10-16; revisão independente PASS em evidence/G9/review.md. G9.7 atualiza links em README, STATUS e complemento dos materiais G7; pacote/vídeo acadêmicos ficam em G8 PENDING.

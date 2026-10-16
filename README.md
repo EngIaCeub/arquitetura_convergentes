@@ -9,7 +9,7 @@ Sistematização disciplina arquiteturas convergentes
 - [Skills locais](docs/SKILLS_DO_PROJETO.md)
 - [Perfis de agentes](agents/perfis.yaml)
 
-P0/G0/G1/G2/G3/G4/GV/G5 aprovados; G6 aprovado no alcance técnico sintético. G7 aprovado nos materiais acadêmicos; G8–G9 pendentes; sistema ainda não publicado. Perfis são política de delegação, não configuração nativa automática. Consultar AGENTS.md antes de executar tarefas.
+P0/G0/G1/G2/G3/G4/GV/G5 aprovados; G6 aprovado no alcance técnico sintético. G7 aprovado nos materiais acadêmicos; G8 acadêmico pendente; demonstração publicada no GitHub Pages por solicitação direta. Perfis são política de delegação, não configuração nativa automática. Consultar AGENTS.md antes de executar tarefas.
 
 ## Executar a demonstração
 
@@ -34,3 +34,9 @@ Indicadores: [protocolo](specs/07-indicadores.md) e [resultados técnicos](evide
 ## Materiais acadêmicos — G7 PASS
 
 Integrante: **Felipe Paz Santiago**. [Apresentação](output/G7/index.html), [roteiro](output/G7/roteiro.md), [instruções](output/G7/instrucoes.md) e [revisão independente](evidence/G7/review.md). A apresentação pode ser aberta localmente com sua pasta de assets. Estimativa do pitch: 4min18s; gravação real e ZIP final ainda pendentes em G8.
+
+## Site publicado
+
+Acesse https://engiaceub.github.io/arquitetura_convergentes/. [Execução validada](https://github.com/EngIaCeub/arquitetura_convergentes/actions/runs/38854955465), versão publicada f0c0a02d1fb4c9b1e3b5321ebc3b87e2568d662a. Dados fictícios individuais por navegador/origem; o banco local não é compartilhado entre visitantes. Vídeo e ZIP acadêmicos G8 continuam pendentes. Publicação antecipada autorizada pelo pedido direto de 2026-10-16.
+
+[Evidências técnicas](evidence/G9/review.md) e [recuperação](evidence/G9/rollback.md).

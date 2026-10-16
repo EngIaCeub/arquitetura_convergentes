@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "url": "https://engiaceub.github.io/arquitetura_convergentes/",
+  "sha": "f0c0a02d1fb4c9b1e3b5321ebc3b87e2568d662a",
+  "at": "2026-10-16T05:18:09.459Z",
+  "browser": "151.0.7922.34",
+  "uiCreate": true,
+  "reloadPersistence": true,
+  "filters": true,
+  "independentContext": true,
+  "mobile": true,
+  "reducedMotion": true,
+  "failures": []
+}

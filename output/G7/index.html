@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Cadastro de Doadores Institucionais — apresentação</title>
+  <style>
+    :root{color-scheme:dark;--bg:#080B16;--panel:#12182B;--raised:#1B2340;--text:#F1F5FF;--muted:#B8C4DF;--cyan:#53E8FF;--pink:#FF4FA3;--violet:#A58BFA;--green:#6EE7B7;--yellow:#FFD166;--line:#899ABA;--mono:ui-monospace,SFMono-Regular,Consolas,monospace}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 82% 10%,#22204a 0,transparent 34%),linear-gradient(135deg,#080B16,#0b1020 58%,#10152b);color:var(--text);font:20px/1.48 system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:linear-gradient(#53e8ff12 1px,transparent 1px),linear-gradient(90deg,#53e8ff12 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+    .deck{position:relative;min-height:100vh}.slide{min-height:100vh;padding:48px clamp(28px,6vw,92px) 112px;display:flex;flex-direction:column;justify-content:center;max-width:1600px;margin:auto}.slide[hidden]{display:none}.eyebrow,.tag,.kicker{font:700 14px/1.35 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--cyan)}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(48px,6.1vw,88px);line-height:1.02;max-width:1000px;margin:20px 0 24px;letter-spacing:-.045em}h2{font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-.035em;margin:14px 0 28px}h3{font-size:23px;margin:0 0 10px;color:var(--cyan)}p{max-width:1000px;color:var(--muted);margin-bottom:18px}.lead{font-size:clamp(23px,2.1vw,30px);line-height:1.42;color:var(--text);max-width:1040px}.accent{color:var(--cyan)}.pink{color:var(--pink)}.violet{color:var(--violet)}.green{color:var(--green)}.yellow{color:var(--yellow)}.mono{font-family:var(--mono)}.small{font-size:20px;line-height:1.4}.source{font-size:16px;line-height:1.4;overflow-wrap:anywhere}.grid{display:grid;gap:18px}.two{grid-template-columns:repeat(2,minmax(0,1fr))}.three{grid-template-columns:repeat(3,minmax(0,1fr))}.card{background:linear-gradient(145deg,#171e35ee,#101629f2);border:1px solid #435171;border-radius:14px;padding:22px;box-shadow:0 14px 40px #0003;min-width:0}.card p:last-child{margin-bottom:0}.pill{display:inline-flex;padding:5px 10px;border:1px solid #59688a;border-radius:999px;color:var(--muted);font:700 13px var(--mono);margin:3px 5px 3px 0}.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;gap:28px;margin-top:16px}.flow .card{position:relative}.flow .card:not(:last-child):after{content:"→";position:absolute;right:-25px;top:42%;font:700 25px var(--mono);color:var(--pink)}.big-number{font:800 clamp(46px,6vw,72px)/1 var(--mono);color:var(--cyan);letter-spacing:-.06em}.result-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:6px 0 20px}.result-grid .card{padding:20px}.result-grid p{font-size:20px;margin:12px 0 0}.demo-shot{display:block;max-width:100%;max-height:360px;object-fit:contain;object-position:top left;border:1px solid #697899;border-radius:10px;background:#080b16}.shot-row{display:grid;grid-template-columns:1.45fr .8fr .95fr;gap:18px;align-items:start}.shot-row figure{margin:0;min-width:0}.shot-row figcaption{font-size:16px;color:var(--muted);margin-top:8px}.shot-row .demo-shot{width:100%;height:330px;object-fit:contain;object-position:top center}.diagram{width:100%;max-height:350px;display:block;background:#0d1325;border:1px solid #465574;border-radius:14px}.diagram text{font-family:system-ui,sans-serif;fill:#F1F5FF;font-size:17px}.diagram .label{font-family:var(--mono);font-size:13px;fill:#B8C4DF}.diagram .box{fill:#171e35;stroke:#53E8FF;stroke-width:2}.diagram .db{fill:#211d3f;stroke:#A58BFA;stroke-width:2}.diagram .json{fill:#2a1930;stroke:#FF4FA3;stroke-width:2}.diagram .host{fill:#172b2d;stroke:#6EE7B7;stroke-width:2}.diagram .arrow{stroke:#FF4FA3;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.diagram .both{marker-start:url(#arrow)}.architecture-mobile{display:none}a{color:var(--cyan);text-underline-offset:3px}a:hover{color:#b9f7ff}.meta{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0 8px}.callout{border-left:4px solid var(--yellow);padding:10px 16px;background:#242033;border-radius:0 10px 10px 0;color:var(--text);max-width:1000px}.footer-line{height:1px;background:linear-gradient(90deg,var(--cyan),#a58bfa44,transparent);margin:22px 0}.controls{position:fixed;z-index:3;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:14px;padding:13px 18px;background:#080b16ed;border-top:1px solid #435171;backdrop-filter:blur(12px)}button{font:700 15px var(--mono);color:var(--text);background:var(--raised);border:1px solid #899aba;border-radius:9px;padding:11px 16px;cursor:pointer}button:hover{border-color:var(--cyan);color:var(--cyan)}button:focus-visible,a:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}.counter{min-width:58px;text-align:center;font:700 14px var(--mono);color:var(--muted)}.progress{position:fixed;top:0;left:0;height:3px;background:var(--cyan);z-index:4;width:12.5%;transition:width .16s ease}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:760px){body{font-size:17px}.slide{min-height:100vh;padding:34px 20px 94px;justify-content:flex-start;scroll-margin-top:4px}.slide[hidden]{display:block}h1{font-size:46px}h2{font-size:36px}.lead{font-size:21px}.small{font-size:17px}.two,.three,.flow,.result-grid,.shot-row{grid-template-columns:1fr}.flow{gap:12px}.flow .card:not(:last-child):after{content:"↓";right:50%;top:auto;bottom:-23px;z-index:1}.diagram{display:none}.architecture-mobile{display:block}.architecture-mobile li{margin:.35em 0}.demo-shot{max-height:none;width:100%}.card{padding:18px}.controls{position:fixed;bottom:0;gap:8px;padding:10px 6px}.controls button{padding:10px 9px;font-size:12px}.progress{position:sticky;top:0}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+    @media print{body{background:#080B16}.slide,.slide[hidden]{display:flex;min-height:100vh;break-after:page;padding:42px}.controls,.progress{display:none}.slide{page-break-after:always}}
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <main class="deck" id="deck" aria-label="Apresentação do Cadastro de Doadores Institucionais">
+    <section class="slide" id="slide-1" aria-labelledby="title-1">
+      <div class="eyebrow">REDE · cadastro de ofertas institucionais</div>
+      <h1 id="title-1">Cadastro de<br><span class="accent">Doadores</span><br>Institucionais</h1>
+      <p class="lead">Uma interface demonstrativa para organizar informações de instituições e recursos que elas declaram oferecer.</p>
+      <div class="meta"><span class="pill">Projeto acadêmico</span><span class="pill">Felipe Paz Santiago</span><span class="pill">Dados fictícios</span></div>
+      <div class="footer-line"></div>
+      <p class="small">Contribuição informacional parcial à meta 3.1.5 do Plano Nacional de Proteção e Defesa Civil.</p>
+    </section>
+
+    <section class="slide" id="slide-2" aria-labelledby="title-2" hidden>
+      <div class="eyebrow">01 / contexto documentado</div><h2 id="title-2">O desafio começa na <span class="pink">coordenação</span></h2>
+      <div class="grid two">
+        <article class="card"><h3>RS · 2024</h3><p>A Orientação Operacional nº 01/2024 documenta a necessidade de padronizar o fluxo e o canal de pedidos de doações, definir prioridades e organizar informações sobre local e público atendido.</p><p class="source"><a href="https://www.gov.br/reconstrucaors/pt-br/central-de-conteudo/documentos/orientacao-operacional-no-01-2024" target="_blank" rel="noreferrer">Fonte oficial · Governo Federal</a><br>Considerandos e itens 1, 3, 4(a) e 6.</p></article>
+        <article class="card"><h3>Quem é afetado?</h3><p>Equipes que recebem e analisam pedidos, Prefeituras e instituições de assistência humanitária. No protótipo, o operador mantém e consulta ofertas de instituições.</p><p class="callout small">A fonte trata de PEDIDOS. O protótipo representa OFERTAS. Essa ponte é uma contribuição informacional parcial; as funções não são equivalentes.</p></article>
+      </div>
+      <p class="small" style="margin-top:18px">A fonte não prova ausência de cadastro, atraso medido ou dispersão de registros. Os dados apresentados no protótipo são fictícios.</p>
+    </section>
+
+    <section class="slide" id="slide-3" aria-labelledby="title-3" hidden>
+      <div class="eyebrow">02 / vínculo com o plano</div><h2 id="title-3">Meta <span class="accent">3.1.5</span></h2>
+      <p class="lead">“Criar cadastro nacional de doadores institucionais para formar rede para atuar na resposta a desastres.”</p>
+      <div class="grid three" style="margin-top:16px">
+        <article class="card"><div class="kicker">Objetivo 3.1</div><p>Aprimorar as capacidades de atuação na resposta a desastres.</p></article>
+        <article class="card"><div class="kicker">Eixo · prazo</div><p><span class="violet">Preparação</span><br><span class="accent">2031</span></p></article>
+        <article class="card"><div class="kicker">Indicador oficial</div><p>Cadastro nacional criado</p></article>
+      </div>
+      <p class="small" style="margin-top:20px">PN-PDC, Quadro 6, página digital 58, impressas 114–115. Responsável e fonte de dados: Sedec; Ministério: MIDR. O protótipo não representa o cadastro nacional nem contabiliza o indicador como atingido.</p>
+    </section>
+
+    <section class="slide" id="slide-4" aria-labelledby="title-4" hidden>
+      <div class="eyebrow">03 / solução e funcionamento</div><h2 id="title-4">Da oferta à consulta</h2>
+      <div class="flow">
+        <article class="card"><div class="kicker">Entrada</div><h3>Instituição + oferta</h3><p class="small">Nome, município, categoria, recurso, quantidade e disponibilidade declarada.</p></article>
+        <article class="card"><div class="kicker">Processamento</div><h3>Regras e validação</h3><p class="small">Serviços JavaScript normalizam e validam os dados e aplicam filtros combinados.</p></article>
+        <article class="card"><div class="kicker">Persistência</div><h3>IndexedDB</h3><p class="small">Gravação local por navegador e origem. Sem sincronização automática.</p></article>
+        <article class="card"><div class="kicker">Saída</div><h3>Consulta + JSON</h3><p class="small">Lista filtrada e transferência explícita por exportação ou importação.</p></article>
+      </div>
+      <p class="small" style="margin-top:22px">Exemplo: cadastrar água e município/UF → validar instituição e oferta → gravar → consultar por recurso e localidade. Quantidades de unidades diferentes não são somadas.</p>
+    </section>
+
+    <section class="slide" id="slide-5" aria-labelledby="title-5" hidden>
+      <div class="eyebrow">04 / arquitetura</div><h2 id="title-5">Aplicação estática, dados locais</h2>
+      <svg class="diagram" viewBox="0 0 1120 330" role="img" aria-labelledby="diag-title diag-desc">
+        <title id="diag-title">Arquitetura do Cadastro de Doadores Institucionais</title><desc id="diag-desc">Interface comunica com serviços e validação, que leem e gravam no IndexedDB local. O JSON transfere dados explicitamente. GitHub Actions prepara arquivos estáticos para hospedagem futura no GitHub Pages; a hospedagem não contém nem sincroniza o banco local.</desc>
+        <defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto-start-reverse"><path d="M0 0L9 4.5L0 9z" fill="#FF4FA3"/></marker></defs>
+        <rect class="box" x="26" y="100" width="190" height="90" rx="13"/><text x="121" y="139" text-anchor="middle">Interface</text><text class="label" x="121" y="163" text-anchor="middle">HTML · CSS · JS</text>
+        <rect class="box" x="296" y="100" width="220" height="90" rx="13"/><text x="406" y="139" text-anchor="middle">Serviços + regras</text><text class="label" x="406" y="163" text-anchor="middle">validação · filtros</text>
+        <rect class="db" x="600" y="52" width="210" height="90" rx="13"/><text x="705" y="91" text-anchor="middle">IndexedDB</text><text class="label" x="705" y="115" text-anchor="middle">perfil · origem local</text>
+        <rect class="json" x="600" y="190" width="210" height="78" rx="13"/><text x="705" y="224" text-anchor="middle">Arquivo JSON</text><text class="label" x="705" y="247" text-anchor="middle">transferência explícita</text>
+        <rect class="host" x="906" y="52" width="190" height="90" rx="13"/><text x="1001" y="91" text-anchor="middle">GitHub Pages</text><text class="label" x="1001" y="115" text-anchor="middle">hospedagem futura</text>
+        <rect class="host" x="906" y="195" width="190" height="60" rx="13"/><text x="1001" y="231" text-anchor="middle">Actions · build</text>
+        <path class="arrow both" d="M216 145H288"/><path class="arrow both" d="M516 125H592"/><path class="arrow both" d="M516 165C548 190 560 223 592 228"/><path class="arrow" d="M906 100C820 20 300 20 121 95"/><path class="arrow" d="M1001 190V150"/>
+        <text class="label" x="505" y="27" text-anchor="middle">HTML · CSS · JS via arquivos estáticos</text>
+        <text class="label" x="560" y="305" text-anchor="middle">O banco permanece no navegador; publicação não sincroniza cadastros entre usuários.</text>
+      </svg>
+      <div class="architecture-mobile" aria-label="Relações entre os componentes da arquitetura">
+        <ul>
+          <li>GitHub Pages → Interface: entrega arquivos estáticos HTML, CSS e JavaScript.</li>
+          <li>Interface ↔ Serviços JavaScript: formulários enviam dados e a tela recebe resultados.</li>
+          <li>Serviços ↔ IndexedDB: leitura e gravação no armazenamento local do navegador/origem.</li>
+          <li>Serviços ↔ JSON: exportação e importação explícitas de arquivo.</li>
+          <li>GitHub Actions → GitHub Pages: build dos arquivos estáticos para hospedagem futura.</li>
+        </ul>
+        <p>O banco permanece no navegador e não é enviado ao Pages nem sincronizado entre usuários.</p>
+      </div>
+      <p class="small" style="margin-top:16px">Tecnologias com função definida: HTML/CSS/JavaScript na interface; IndexedDB na persistência local; JSON na transferência; Node.js nos comandos de build/validação; GitHub Actions e Pages na publicação estática planejada.</p>
+    </section>
+
+    <section class="slide" id="slide-6" aria-labelledby="title-6" hidden>
+      <div class="eyebrow">05 / protótipo</div><h2 id="title-6">Interface para consulta e cadastro</h2>
+      <div class="shot-row">
+        <figure><a href="assets/app-1440.png" target="_blank" rel="noreferrer"><img class="demo-shot" src="assets/app-1440.png" alt="Captura real da aplicação em viewport desktop de 1440 pixels; abrir para ampliar"></a><figcaption>Aplicação · captura real em viewport 1440 px. <a href="assets/app-1440.png" target="_blank" rel="noreferrer">Abrir original</a>.</figcaption></figure>
+        <figure><a href="assets/form-360.png" target="_blank" rel="noreferrer"><img class="demo-shot" src="assets/form-360.png" alt="Captura real do formulário em viewport móvel de 360 pixels; abrir para ampliar"></a><figcaption>Formulário · captura real em viewport móvel de 360 px. <a href="assets/form-360.png" target="_blank" rel="noreferrer">Abrir original</a>.</figcaption></figure>
+        <figure><a href="assets/backup.png" target="_blank" rel="noreferrer"><img class="demo-shot" src="assets/backup.png" alt="Captura real da função de backup JSON"></a><figcaption>Backup JSON · captura real da transferência e restauração. <a href="assets/backup.png" target="_blank" rel="noreferrer">Abrir original</a>.</figcaption></figure>
+      </div>
+      <p class="small" style="margin-top:16px">Registros demonstrativos fictícios. As capturas vêm das evidências de GV e G4; não são mockups nem ensaio com participante.</p>
+    </section>
+
+    <section class="slide" id="slide-7" aria-labelledby="title-7" hidden>
+      <div class="eyebrow">06 / indicador e resultado</div><h2 id="title-7">O que foi medido</h2>
+      <div class="result-grid">
+        <article class="card"><div class="big-number">480/480</div><p>consultas com conjunto esperado de IDs · <strong class="green">100% de acerto técnico</strong></p></article>
+        <article class="card"><div class="big-number">0,4 ms</div><p>mediana técnica de cada método: listagem de referência e sistema filtrado</p></article>
+        <article class="card"><div class="big-number">0%</div><p>redução técnica agregada de tempo neste ensaio</p></article>
+      </div>
+      <p class="callout">Escopo: 8 tarefas fictícias, Chromium headless, 30 repetições por tarefa e método, cache aquecido. Zero participantes humanos. Isso mede consulta técnica, não tempo de busca de uma pessoa.</p>
+      <p class="small" style="margin-top:16px">Indicador próprio: acerto exato dos IDs; tempo técnico e candidatos filtrados são secundários. Benefício esperado — reduzir esforço humano de consulta — permanece hipótese para avaliação futura. Fonte: evidence/G6/resultados.md e protocolo em specs/07.</p>
+    </section>
+
+    <section class="slide" id="slide-8" aria-labelledby="title-8" hidden>
+      <div class="eyebrow">07 / alcance, benefício esperado e risco</div><h2 id="title-8">Uma contribuição delimitada</h2>
+      <div class="grid two">
+        <article class="card"><h3>Benefício esperado</h3><p>Organizar ofertas declaradas e permitir consultas por filtros pode apoiar a localização de recursos em uma rede de resposta.</p><p class="small"><span class="yellow">Hipótese:</span> ainda depende de avaliação com pessoas e dados adequados. A medição sintética não prova benefício operacional.</p></article>
+        <article class="card"><h3>Limites e riscos</h3><p>Dados persistem por navegador e origem; não há sincronização. Backup/importação JSON é explícito. Trocar de origem pode significar outra base local.</p><p class="small">Escopo previsto: JSON até 2 MiB, 1.000 instituições e 5.000 ofertas. Em volume máximo, há pausas técnicas; unidades diferentes não devem ser somadas.</p></article>
+      </div>
+      <div class="footer-line"></div><p class="lead">Cadastro demonstrativo de ofertas. A meta oficial continua sendo um cadastro nacional criado.</p>
+      <p class="source">Caso documentado: <a href="https://www.gov.br/reconstrucaors/pt-br/central-de-conteudo/documentos/orientacao-operacional-no-01-2024" target="_blank" rel="noreferrer">Orientação Operacional nº 01/2024 · RS</a>. Registro do indicador nacional: PN-PDC, Quadro 6, p. digital 58 / impressas 114–115.</p>
+    </section>
+  </main>
+  <nav class="controls" aria-label="Navegação da apresentação">
+    <button type="button" id="prev" aria-label="Slide anterior">← Anterior</button>
+    <span class="counter" id="counter" aria-live="polite">1 / 8</span>
+    <button type="button" id="next" aria-label="Próximo slide">Próximo →</button>
+    <span class="sr-only" id="help">Use as setas esquerda e direita, Page Up e Page Down, ou os botões para navegar.</span>
+  </nav>
+  <script>
+    (()=>{const slides=[...document.querySelectorAll('.slide')],counter=document.querySelector('#counter'),progress=document.querySelector('#progress'),prev=document.querySelector('#prev'),next=document.querySelector('#next');let index=0,scrollQueued=false;const mobile=()=>matchMedia('(max-width:760px)').matches;function update(n){index=Math.max(0,Math.min(slides.length-1,n));counter.textContent=`${index+1} / ${slides.length}`;progress.style.width=`${(index+1)/slides.length*100}%`;prev.disabled=index===0;next.disabled=index===slides.length-1;}function show(n,move=true){const target=Math.max(0,Math.min(slides.length-1,n));if(!mobile())slides.forEach((s,i)=>s.hidden=i!==target);update(target);if(move)slides[target].scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});}function syncFromScroll(){if(!mobile())return;scrollQueued=true;requestAnimationFrame(()=>{scrollQueued=false;const anchor=innerHeight*.45;let active=slides.findIndex(s=>{const r=s.getBoundingClientRect();return r.top<=anchor&&r.bottom>anchor});if(active<0){let distance=Infinity;slides.forEach((s,i)=>{const d=Math.abs(s.getBoundingClientRect().top-anchor);if(d<distance){distance=d;active=i;}});}if(active!==index)update(active);});}prev.addEventListener('click',()=>show(index-1));next.addEventListener('click',()=>show(index+1));document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(index+1)}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(index-1)}else if(e.key==='Home'){show(0)}else if(e.key==='End'){show(slides.length-1)}});addEventListener('scroll',syncFromScroll,{passive:true});addEventListener('resize',()=>show(index,false));update(0);})();
+  </script>
+</body>
+</html>

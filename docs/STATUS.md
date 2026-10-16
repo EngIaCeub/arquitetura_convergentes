@@ -1,6 +1,6 @@
 # STATUS
 
-Data: 2026-10-10. **P0 PASS** após validação estrutural e revisão independente. **G0 PASS** após revisão independente do caso real RS/2024. **G1 PASS documental**; **G2 PASS documental**, GV.1–3 aprovadas; **G3 PASS**, **G4 PASS**, **GV PASS**; **G5 PASS**, **G6 PASS técnico sintético**, **G7 PASS documental**, G8–G9 permanecem **PENDING**. Specs 00–11 criadas; aplicação implementada, publicação ainda não iniciada.
+Data: 2026-10-16. **P0 PASS** após validação estrutural e revisão independente. **G0 PASS** após revisão independente do caso real RS/2024. **G1 PASS documental**; **G2 PASS documental**, GV.1–3 aprovadas; **G3 PASS**, **G4 PASS**, **GV PASS**; **G5 PASS**, **G6 PASS técnico sintético**, **G7 PASS documental**, **G8 PENDING acadêmico**, **G9 PASS técnico da publicação**. Specs 00–11 criadas; aplicação publicada em https://engiaceub.github.io/arquitetura_convergentes/.
 
 | Task | Estado | Evidência |
 |---|---|---|
@@ -78,3 +78,7 @@ G8 PENDING: vídeo real com áudio e duração até cinco minutos ainda ausente;
 
 ## G9 — Publicação solicitada em 2026-10-16
 O usuário solicitou explicitamente a publicação no GitHub Pages após ser informado da dependência G8. Este pedido altera a sequência para publicar a demonstração web antes do vídeo/pacote acadêmico. G8 continua PENDING; não há aprovação fictícia do vídeo. G9 em execução, sujeito a checks técnicos e revisão independente.
+
+G9 PASS técnico após [revisão independente](../evidence/G9/review.md). SHA publicado f0c0a02d1fb4c9b1e3b5321ebc3b87e2568d662a; [Actions success](https://github.com/EngIaCeub/arquitetura_convergentes/actions/runs/38854955465), deployment 7111556290 success; metadata e bytes públicos conferidos contra o commit. 19 testes e smoke local/público passaram; edição, persistência, filtros, cascata, export/import e contexto independente revisados. [Recuperação](../evidence/G9/rollback.md).
+
+URL real: https://engiaceub.github.io/arquitetura_convergentes/. Publicado apenas dist, sem PDFs/fontes privadas. Materiais G7 recebem complemento publicacao.md; vídeo/ZIP G8 continuam PENDING. Registro documental posterior usa [skip ci] e não altera o artefato publicado; SHA acima é a versão efetivamente em produção.

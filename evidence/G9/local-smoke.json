@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "url": "http://127.0.0.1:4185/arquitetura_convergentes/",
+  "sha": null,
+  "at": "2026-10-16T05:15:50.134Z",
+  "browser": "151.0.7922.34",
+  "uiCreate": true,
+  "reloadPersistence": true,
+  "filters": true,
+  "independentContext": true,
+  "mobile": true,
+  "reducedMotion": true,
+  "failures": []
+}

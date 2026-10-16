@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "at": "2026-10-16T05:18:58.858Z",
+  "url": "https://engiaceub.github.io/arquitetura_convergentes/",
+  "sha": "f0c0a02d1fb4c9b1e3b5321ebc3b87e2568d662a",
+  "browser": "151.0.7922.34",
+  "results": [
+    "HTTPS, initial UI and deployed SHA",
+    "9 public files match reviewed Git commit bytes",
+    "UI institution/offer create, offer edit and reload persistence",
+    "Municipality filter, 360px layout, computed reduced motion",
+    "UI institution deactivation cascades without quantity loss",
+    "Independent clean browser context plus real JSON download/import"
+  ],
+  "failures": [],
+  "limits": "Automação em Chromium com dados fictícios; perfis representados por contextos isolados. Sem avaliação humana nem gravação de vídeo."
+}

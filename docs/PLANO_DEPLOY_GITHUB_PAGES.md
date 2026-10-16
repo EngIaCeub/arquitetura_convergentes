@@ -124,3 +124,6 @@ Fontes técnicas consultadas:
 - https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
 - https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
 - https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
+
+## Decisão vigente — 2026-10-16
+Pedido direto de publicação web autoriza G9 antes do vídeo e ZIP acadêmicos de G8. A conclusão técnica do deploy não aprova a entrega acadêmica completa. Manter G8 PENDING e aplicar os demais checks de G9 normalmente.
