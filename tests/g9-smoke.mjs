@@ -1,0 +1,45 @@
+import assert from 'node:assert/strict';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {browserRuntime,baseURL} from './helpers.mjs';
+const {chromium}=await browserRuntime();
+const browser=await chromium.launch();
+const failures=[];
+try{
+ const context=await browser.newContext({reducedMotion:'reduce'});
+ const page=await context.newPage();
+ page.on('pageerror',e=>failures.push(e.message));
+ page.on('response',r=>{if(r.status()>=400)failures.push(`${r.status()} ${r.url()}`)});
+ await page.goto(baseURL,{waitUntil:'networkidle'});
+ if(process.env.EXPECTED_SHA){const response=await page.request.get(new URL('build-meta.json',baseURL).href);assert.equal(response.status(),200);assert.equal((await response.json()).sha,process.env.EXPECTED_SHA);}
+ await page.goto(baseURL+'#/instituicoes/nova');
+ await page.getByLabel('Nome',{exact:false}).fill('Instituição QA publicação');
+ await page.getByLabel('Tipo',{exact:false}).selectOption('empresa');
+ await page.getByLabel('Identificação fictícia').fill('QA-PAGES');
+ await page.getByLabel('UF',{exact:false}).selectOption('RS');
+ await page.getByLabel('Município',{exact:false}).fill('Cidade Pages');
+ await page.getByRole('button',{name:'Salvar',exact:true}).click();
+ await page.getByRole('heading',{name:'Instituição QA publicação',exact:true}).waitFor();
+ await page.getByRole('link',{name:'+ Nova oferta',exact:true}).click();
+ await page.getByLabel('Categoria',{exact:false}).selectOption('agua');
+ await page.getByLabel('Recurso',{exact:false}).fill('Água QA Pages');
+ await page.getByLabel('Quantidade',{exact:false}).fill('10');
+ await page.getByLabel('Unidade',{exact:false}).selectOption('litro');
+ await page.getByLabel('Disponibilidade declarada',{exact:false}).selectOption('disponivel');
+ await page.getByRole('button',{name:'Salvar',exact:true}).click();
+ await page.getByRole('heading',{name:'Água QA Pages',exact:true}).waitFor();
+ await page.reload();await page.getByRole('heading',{name:'Água QA Pages',exact:true}).waitFor();
+ await page.goto(baseURL+'#/ofertas');
+ await page.locator('#municipio').fill('Cidade Pages');
+ await page.getByRole('button',{name:'Aplicar filtros',exact:true}).click();
+ await page.waitForFunction(()=>document.querySelector('#result-count')?.textContent==='1');
+ const second=await browser.newContext();const other=await second.newPage();await other.goto(baseURL,{waitUntil:'networkidle'});
+ assert.equal(await other.evaluate(async()=>{const {CadastroService}=await import('./src/domain/service.js');return (await new CadastroService().obterBase()).instituicoes.some(i=>i.identificacao==='QA-PAGES')}),false);
+ await second.close();
+ await page.setViewportSize({width:360,height:900});
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+ await mkdir('evidence/G9',{recursive:true});
+ await page.screenshot({path:'evidence/G9/public-smoke.png',fullPage:true});
+ assert.deepEqual(failures,[]);
+ await writeFile('evidence/G9/smoke.json',JSON.stringify({status:'PASS',url:baseURL,sha:process.env.EXPECTED_SHA||null,at:new Date().toISOString(),browser:browser.version(),uiCreate:true,reloadPersistence:true,filters:true,independentContext:true,mobile:true,reducedMotion:true,failures},null,2));
+ console.log('PASS Pages: assets, cadastro/oferta, recarga, filtros, contexto independente e mobile.');
+}finally{await browser.close()}

@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Temporary previews and skill validation dependencies
+tmp/
+
+# Web tooling
+node_modules/
+playwright-report/
+test-results/

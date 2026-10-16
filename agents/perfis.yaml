@@ -1,0 +1,121 @@
+schema_version: 1
+kind: project-policy-not-native-config
+max_concurrent_agents: 4
+default_workers: 1
+profiles:
+- id: coordenador
+  model: gpt-6.1-sol
+  reasoning_effort: medium
+  prompt: agents/coordenador.md
+  skills:
+  - validar-gate
+  write_scope:
+  - docs/
+  - evidence/
+  - AGENTS.md
+  max_children: 0
+  review_required: false
+- id: extrator-fontes
+  model: gpt-6-luna
+  reasoning_effort: high
+  prompt: agents/extrator-fontes.md
+  skills:
+  - fundamentar-meta
+  write_scope:
+  - specs/00-escopo-e-fontes.md
+  - evidence/G0/
+  max_children: 0
+  review_required: true
+- id: especificador
+  model: gpt-6.1-sol
+  reasoning_effort: medium
+  prompt: agents/especificador.md
+  skills:
+  - especificar-contratos
+  write_scope:
+  - specs/
+  - docs/decisions/
+  - agents/
+  max_children: 0
+  review_required: true
+- id: implementador
+  model: gpt-6.1-sol
+  reasoning_effort: medium
+  prompt: agents/implementador.md
+  skills:
+  - implementar-fatia
+  - aplicar-tema-e-movimento
+  write_scope:
+  - src/
+  - tests/
+  - scripts/
+  max_children: 0
+  review_required: true
+- id: verificador
+  model: gpt-6-luna
+  reasoning_effort: high
+  prompt: agents/verificador.md
+  skills:
+  - validar-gate
+  write_scope:
+  - evidence/
+  max_children: 0
+  review_required: true
+- id: revisor
+  model: gpt-6.1-sol
+  reasoning_effort: high
+  prompt: agents/revisor.md
+  skills:
+  - validar-gate
+  write_scope:
+  - evidence/
+  max_children: 0
+  review_required: true
+- id: avaliador
+  model: gpt-6.1-sol
+  reasoning_effort: medium
+  prompt: agents/avaliador.md
+  skills:
+  - medir-indicador
+  write_scope:
+  - specs/07-indicadores.md
+  - evidence/G6/
+  - scripts/
+  max_children: 0
+  review_required: true
+- id: produtor-entrega
+  model: gpt-6-luna
+  reasoning_effort: high
+  prompt: agents/produtor-entrega.md
+  skills:
+  - preparar-entrega
+  write_scope:
+  - specs/08-entrega-e-pitch.md
+  - output/
+  max_children: 0
+  review_required: true
+- id: designer
+  model: gpt-6.1-sol
+  reasoning_effort: medium
+  prompt: agents/designer.md
+  skills:
+  - definir-identidade-retro-neon
+  write_scope:
+  - specs/11-design-retro-neon.md
+  - design/preview/
+  - evidence/GV/
+  max_children: 0
+  review_required: true
+  temporary_specialization_of: especificador
+- id: publicador
+  model: gpt-6.1-sol
+  reasoning_effort: medium
+  prompt: agents/publicador.md
+  skills:
+  - publicar-pages
+  write_scope:
+  - .github/workflows/
+  - evidence/G9/
+  max_children: 0
+  review_required: true
+  temporary_specialization_of: implementador
